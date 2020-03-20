@@ -10,7 +10,7 @@ searchInput.addEventListener('keyup', (event) => {
     filterData(event.target.value);
 });
 searchInput.addEventListener('focus', () => {
-    resultsPane.style.display = "block";
+    resultsPane.style.display = "flex";
 });
 searchInput.addEventListener('blur', () => {
     resultsPane.style.display = "none";
@@ -64,6 +64,30 @@ function filterData(input) {
 
     console.log('after filtering -> ', filteredData)
 
-    filteredData.forEach(each => { resultsPane.innerHTML += `<div>${each.name}</div>` })
+    filteredData.forEach(each => {
+        resultsPane.innerHTML +=
+            `<div class = "card">
+            <h5> ${each.name} </h5> 
+            <p> ${each.price} cedis </p>
+            <p> ${each.duration} </p> 
+        </div>`
+
+    })
+
     console.log(resultsPane)
 }
+
+//prospects' performance
+let allStudents = null;
+
+async function fetchStudents() {
+    const response = await fetch('http://localhost/codingChallenge/api/students.php');
+    console.log('value -> ', response);
+    allStudents = await response.json();
+    console.log('converting object to array -> ', Object.values(allStudents.data.values))
+    const resultsArray = Object.values(allStudents.data.values);
+}
+
+
+
+

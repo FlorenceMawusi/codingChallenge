@@ -21,27 +21,17 @@
 
 <body>
     <div class='banner'>
+        <h1 class='text'>FloCode: Let's Code!</h1>
         <div class='banner-text'>
-            Training programs available
+            Training programs available:
 
         </div>
         <input class='search' id='search' />
         <div class='results' id='results'>No results to show</div>
     </div>
-    <!-- <div class="firstdiv container">
-        <h3>Training Progams Available</h3>
-        <form>
-            <div class="form-row">
-                <div class="form-group col-md-4">
-                    <label for="search">Name</label>
-                    <input type="text" class="form-control" id="search" placeholder="Search by Training Program">
-                </div>
-                <div id="results">
+    <div id="pchart" class="pchart">
 
-                </div>
-            </div>
-        </form>
-    </div> -->
+    </div>
 
 
     <!--  JavaScript -->
@@ -56,8 +46,10 @@
         crossorigin="anonymous"></script>
 
 
-    <script src='./request.js'>
-    </script>
+    <script src='./request.js'></script>
+
+    <!-- D3 library for Chart-->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
 </body>
 
 </html>
