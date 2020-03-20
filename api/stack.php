@@ -13,14 +13,9 @@
     $dejson = json_decode($content);
 
     $returnObj->success = true;
-    $returnObj->data = $dejson->students;
+    $returnObj->data = $dejson->stacks;
     //foreach ($returnObj as "$i"){
     //    echo "$i[0]";
     //}
     $entrjson = json_encode($returnObj);
     echo $entrjson;
-
-    
- 
-?>
-
