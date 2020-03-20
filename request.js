@@ -121,13 +121,13 @@ const dataset = {
     borderWidth: 1
 };
 
-const pchart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels,
-        ...dataset,
-    }
-})
+// const pchart = new Chart(ctx, {
+//     type: 'bar',
+//     data: {
+//         labels,
+//         ...dataset,
+//     }
+// })
 
 
 
