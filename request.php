@@ -1,11 +1,32 @@
-<?php
+var request = new XMLHttpRequest()
+request.open('GET', 'data.json', true)
 
-$url = 'data.json'; // path to your JSON file
 
-$data = file_get_contents($url); // put the contents of the file into a variable
-
-$characters = json_decode($data); // decode the JSON feed
-
-echo $characters[0]->name;
-
-?>
+$('#inputName').keyup(function(){
+    var searchField = $(this).val();
+    if(searchField === '')  {
+        $('#filter-records').html('');
+        return;
+    }
+    
+    var regex = new RegExp(searchField, "i");
+    var output = '<div class="row">';
+    var count = 1;
+      $.each(data, function(key, val){
+        if ((val.employee_salary.search(regex) != -1) || (val.employee_name.search(regex) != -1)) {
+          output += '<div class="col-md-6 well">';
+          output += '<div class="col-md-3"><img class="img-responsive" src="'+val.profile_image+'" alt="'+ val.employee_name +'" /></div>';
+          output += '<div class="col-md-7">';
+          output += '<h5>' + val.employee_name + '</h5>';
+          output += '<p>' + val.employee_salary + '</p>'
+          output += '</div>';
+          output += '</div>';
+          if(count%2 == 0){
+            output += '</div><div class="row">'
+          }
+          count++;
+        }
+      });
+      output += '</div>';
+      $('#filter-records').html(output);
+});
