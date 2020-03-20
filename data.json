@@ -1,21 +1,58 @@
 [{
-	"name": "Kids Coding",
+	"name": "Coding for Kids",
 	"price": "300",
-	"participants": "100"
+	"Duration": "5"
 }, {
-	"name": "Summer School",
+	"name": "Web Development",
 	"price": "200",
-	"participants": "150"
+	"Duration": "6"
 }, {
-	"name": "Big Data Training",
+	"name": "Big Data",
 	"price": "150",
-	"participants": "50"
+	"Duration": "4"
 },	{
-	"name": "Big Data Training",
+	"name": "Internet of things",
+	"price": "250",
+	"Duration": "6"
+},	{
+	"name": "Database Systems",
+	"price": "180",
+	"Duration": "8"
+},	{
+	"name": "System Analysis",
 	"price": "150",
-	"participants": "50"
+	"Duration": "7"
+},	{
+	"name": "Networking",
+	"price": "180",
+	"Duration": "6"
+},	{
+	"name": "Cyber Security",
+	"price": "250",
+	"Duration": "7"
+},	{
+	"name": "Machine Learning",
+	"price": "300",
+	"Duration": "8"
+},	{
+	"name": "Systems Administration",
+	"price": "350",
+	"Duration": "4"
+},	{
+	"name": "Graphic Design",
+	"price": "250",
+	"Duration": "7"
+},	{
+	"name": "Data Analytics",
+	"price": "150",
+	"Duration": "6"
+},	{
+	"name": "Mobile App Development",
+	"price": "190",
+	"Duration": "6"
 }
 ]
+
 
 
 

@@ -12,25 +12,17 @@
   </head>
   <body>
     <div class="firstdiv container">
-        <h1>Training Progams</h1>
+        <h1>Training Progams Available</h1>
         <form>
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="inputName">Name</label>
-                    <select id="inputName" class="form-control">
-                        <option selected>Choose...</option>
-                        <option>...</option>
-                    </select>
+                    <input type="text" class="form-control" id="inputName">
                 </div>
-                <div class="form-group col-md-4">
-                    <label for="inputPrice">Price</label>
-                    <<select id="inputPrice" class="form-control">
-                        <option selected>Choose...</option>
-                        <option>...</option>
-                    </select>
+                <div id="filter-records">
+                
                 </div>
             </div>
-            <input type="submit" class="btn btn-primary">
         </form>
     </div>
 
