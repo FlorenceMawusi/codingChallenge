@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" />
+
 
     <!-- style.css file -->
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -29,9 +31,9 @@
         <input class='search' id='search' />
         <div class='results' id='results'>No results to show</div>
     </div>
-    <div id="pchart" class="pchart">
+    <canvas width="200" height="200" id="pchart" class="pchart">
 
-    </div>
+    </canvas>
 
 
     <!--  JavaScript -->
@@ -46,10 +48,10 @@
         crossorigin="anonymous"></script>
 
 
-    <script src='./request.js'></script>
-
-    <!-- D3 library for Chart-->
-    <script src="https://d3js.org/d3.v5.min.js"></script>
+        
+        <!-- D3 library for Chart-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+        <script src='./request.js'></script>
 </body>
 
 </html>
