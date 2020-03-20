@@ -14,26 +14,37 @@
     <!-- style.css file -->
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    <?php include 'require.php';?>
-    
     <title>FloCode</title>
 
     <script>
-        function showHint(str) {
-        var xhttp;
-        if (str.length == 0) { 
-            document.getElementById("filter-records").innerHTML = "";
-            return;
+        $(document).ready(function(){
+
+        load_data();
+
+        function load_data(query)
+        {
+            $.ajax({
+                url:"fetch.php",
+                method:"POST",
+                data:{query:query},
+                success:function(data)
+                {
+                    $('#result').html(data);
+                }
+            });
         }
-        xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("filter-records").innerHTML = this.responseText;
+        $('#search').keyup(function(){
+            var search = $(this).val();
+            if(search != '')
+            {
+            load_data(search);
             }
-        };
-        xhttp.open("GET", "filter-records.php?q="+str, true);
-        xhttp.send();   
+            else
+            {
+            load_data();
         }
+     });
+    });
     </script>
   </head>
   <body>
@@ -43,10 +54,11 @@
         <form>
             <div class="form-row">
                 <div class="form-group col-md-4">
-                    <label for="inputName">Name</label>
-                    <input type="text" class="form-control" id="inputName" onkeyup = "showHint(this.value)">
+                    <label for="search">Name</label>
+                    <input type="text" class="form-control" id="search" 
+                    placeholder = "Search by Training Program">
                 </div>
-                <div id="filter-records">
+                <div id="result">
                 
                 </div>
             </div>
