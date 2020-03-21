@@ -9,4 +9,16 @@
 
 
 
-* build api
+* build APIs:
+-for retrieving training programs data
+-for retrieving data on student's grades
+-for retrieving data on development stacks' trends
+
+*build front end:
+-create live search for training programs
+-create pie chart to display prospect's performances
+- create bar chart to diplay inductry trends
+
+
+
+

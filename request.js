@@ -1,5 +1,5 @@
 fetchTrainingPrograms();
-// fetchStudents();
+
 
 
 const resultsPane = document.getElementById('results')
@@ -35,11 +35,6 @@ async function fetchTrainingPrograms() {
     console.log('converting object to array -> ', Object.values(allTrainingPrograms.data.values))
     const resultsArray = Object.values(allTrainingPrograms.data.values);
 
-
-    // for (i = 0; i < resultsArray.length; i++) {
-    //     const div = `<div>${resultsArray[i].name}</div>`
-    //     resultsPane.innerHTML += div;
-    // }
 }
 
 
