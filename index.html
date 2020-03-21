@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <div class='banner'>
+    <div  class='banner'>
         <h1 class='text'>FloCode: Let's Code!</h1>
         <div class='banner-text'>
             Training programs available:
@@ -30,11 +30,23 @@
         </div>
         <input class='search' id='search' />
         <div class='results' id='results'>No results to show</div>
+    </div >
+
+    <div class= "row">
+        <div class="chart-container col-md-6" style="position: relative; height:50vh; width:60vw margin: auto">
+            <br><br>
+            <canvas  id="pchart" class="pchart card">
+
+            </canvas>
+        </div>
+        
+        <div class="chart-container col-md-6" style="position: relative; height:50vh; width:60vw margin: auto">
+            <br><br>
+            <canvas  id="bchart" class="bchart card">
+
+            </canvas>
+        </div>
     </div>
-    <canvas width="200" height="200" id="pchart" class="pchart card">
-
-    </canvas>
-
 
     <!--  JavaScript -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -49,9 +61,11 @@
 
 
         
-        <!-- D3 library for Chart-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-        <script src='./request.js'></script>
+    <!-- Chart.js library for Charts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src='./request.js'></script>
+    <script src='./prospects_performance.js'></script>
+    <script src='./stack_trends.js'></script>
 </body>
 
 </html>

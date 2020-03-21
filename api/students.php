@@ -1,10 +1,3 @@
-<!-- 
-//read in the json string from the file.
-// get the students in the object. 
-// convert the students object into a string.
-//echo that string
-
--->
 
 <?php
 

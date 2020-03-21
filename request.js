@@ -1,5 +1,5 @@
 fetchTrainingPrograms();
-
+// fetchStudents();
 
 
 const resultsPane = document.getElementById('results')
@@ -74,64 +74,8 @@ function filterData(input) {
 
     })
 
-    console.log(resultsPane)
+    console.log(resultsPane);
 }
-
-//prospects' performance
-let allStudents = null;
-
-async function fetchStudents() {
-    const response = await fetch('http://localhost/codingChallenge/api/students.php');
-    console.log('value -> ', response);
-    allStudents = await response.json();
-    console.log('converting object to array -> ', Object.values(allStudents.data.values))
-    const resultsArray = Object.values(allStudents.data.values);
-
-    // resultsArray.forEach(each => {
-    //     resultsArray.innerHTML +=
-    //         `<div class = "card">
-    //             <h5> ${each.name} </h5> 
-    //             <p> ${each.price} cedis </p>
-    //             <p> ${each.duration} </p> 
-    //     </div>`
-
-}
-
-const ctx = "pchart";
-const labels = ["A", "B", "C"];
-const dataset = {
-    label: '# of Votes',
-    data: [12, 19, 3, 5, 2, 3],
-    backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)',
-        'rgba(75, 192, 192, 0.2)',
-        'rgba(153, 102, 255, 0.2)',
-        'rgba(255, 159, 64, 0.2)'
-    ],
-    borderColor: [
-        'rgba(255, 99, 132, 1)',
-        'rgba(54, 162, 235, 1)',
-        'rgba(255, 206, 86, 1)',
-        'rgba(75, 192, 192, 1)',
-        'rgba(153, 102, 255, 1)',
-        'rgba(255, 159, 64, 1)'
-    ],
-    borderWidth: 1
-};
-
-// const pchart = new Chart(ctx, {
-//     type: 'bar',
-//     data: {
-//         labels,
-//         ...dataset,
-//     }
-// })
-
-
-
-
 
 
 

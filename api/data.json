@@ -210,44 +210,44 @@
 	
 		"1":{
 			"id": "1",
-			"name": "PHP",
-			"trend": "+20%"
+			"name": "Ruby",
+			"trend": "+20"
 		},
 		"2":{
 			"id": "2",
 			"name": "XAMPP",
-			"trend": "+10%"
+			"trend": "+10"
 		},
 		"3":{
 			"id": "3",
-			"name": "Javascript",
-			"trend": "-20%"
+			"name": "Spring",
+			"trend": "-20"
 		},
 		"4":{
 			"id": "4",
-			"name": "Python",
-			"trend": "+30%"
+			"name": "MERN",
+			"trend": "+30"
 		},
 		"5":{
 			"id": "5",
-			"name": "Nodejs",
-			"trend": "-10%"
+			"name": "LAMP",
+			"trend": "-10"
 		},
 		"6":{
 			"id": "6",
-			"name": "SQL",
-			"trend": "+0%"
+			"name": "Java",
+			"trend": "+60"
 		},
 		"7":{
 			"id": "7",
-			"name": "Python",
-			"trend": "+40%"
+			"name": "MEAN",
+			"trend": "+40"
 		},
 		"8":{
 			"id": "8",
 			"name": "Django",
-			"trend": "+70%"
-		}
+			"trend": "+70"
+		} 
 	}
 	},
 	"students": {
