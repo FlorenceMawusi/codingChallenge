@@ -44,6 +44,7 @@ async function fetchStudents() {
             labels: ["Grade A", "Grade B", "Grade C"],
             datasets: [
                 {
+                    
                     label: "Grades",
                     backgroundColor: ["#3e95cd", "#8e5ea2","#c45850"],
                     data: [gradeA, gradeB, gradeC]
@@ -51,9 +52,10 @@ async function fetchStudents() {
             ]
         },
         options: {
+            
             title: {
                 display: true,
-                text: 'Prospects Performances Across Training Programs'
+                text: 'Students Performances Across Training Programs'
             }
         }
     });

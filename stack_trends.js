@@ -26,12 +26,12 @@ async function fetchStacks() {
 
 
     
-    new Chart(document.getElementById("bchart"), {
+    new Chart(document.getElementById("bchart").getContext('2d'), {
         type: 'bar',
         data: {
             labels: namesArray,
             datasets: [
-                {
+                {   
                     label: "Development Stacks",
                     backgroundColor: ["#3e95cd", "#8e5ea2","#c45850", "#F2BB9C", 
                         "#FF585F", "#F1872F", "#C987E9", "#4C74B9"],
@@ -40,11 +40,28 @@ async function fetchStacks() {
             ]
         },
         options: {
+            responsive: true,
+            legend: {
+                display: false
+            },
             title: {
-                legend: false,
                 display: true,
                 text: 'Development Stacks Industry Trends (%)'
-            }
+            },
+            scales: {
+                yAxes: [{
+                  scaleLabel: {
+                    display: true,
+                    labelString: 'Trends inPercentage (%)'
+                  }
+                }],
+                xAxes: [{
+                  scaleLabel: {
+                    display: true,
+                    labelString: 'Stacks'
+                  }
+                }]
+            },   
         }
     });
 }
